@@ -4,7 +4,7 @@ function Footer() {
   return (
     <div className="flex justify-center text-gray-600 w-screen">
       <p>
-        Made by Ertan{" "}
+        Made by Ertan
         <a href="https://www.github.com/highpriesst">@highpriesst</a>
       </p>
     </div>

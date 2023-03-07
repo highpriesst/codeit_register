@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function Register() {
   //To limit given time
   const current = new Date().toISOString().split("T")[0];
+  const [data, setData] = useState();
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(`http://localhost:3000`);
+      const newData = await response.json();
+      setData(newData);
+    };
+
+    fetchData();
+  }, []);
+  console.log(data);
   return (
     <div className="border border-gray-800 rounded-md bg-gray-600 text-gray-200">
       <div className="flex flex-col p-5">
